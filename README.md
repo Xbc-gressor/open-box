@@ -15,6 +15,7 @@
 [![Test](https://github.com/PKU-DAIR/open-box/actions/workflows/test.yml/badge.svg)](https://github.com/PKU-DAIR/open-box/actions/workflows/test.yml)
 [![Documentation Status](https://readthedocs.org/projects/open-box/badge/?version=latest)](
   https://open-box.readthedocs.io/)
+[![codecov](https://codecov.io/gh/Xbc-gressor/open-box/graph/badge.svg?token=fR0rjs17GI)](https://codecov.io/gh/Xbc-gressor/open-box)
 
 [OpenBox Documentation](https://open-box.readthedocs.io)
 | [OpenBox中文文档](https://open-box.readthedocs.io/zh_CN/latest/)
