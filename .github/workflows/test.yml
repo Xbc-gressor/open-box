@@ -50,4 +50,7 @@ jobs:
       run: |
         pytest ${{ env.pytest-args }} ${{ env.test-dir }} --cov=openbox.acq_optimizer --cov=openbox.acquisition_function --cov=openbox.core --cov=openbox.optimizer --cov=openbox.surrogate --cov=openbox.utils --cov=openbox.visualization --cov-report=xml
     - name: Upload coverage reports to Codecov with GitHub Action
+      if: ${{ runner.os == 'Linux' && matrix.python-version == 3.8 }}
       uses: codecov/codecov-action@v3
+      env:
+        CODECOV_TOKEN: 5bc7653d-2e6b-4e4c-a08d-a0fd8adca6ad
