@@ -4,7 +4,7 @@
   "num_constraints": 0,
   "ref_point": null,
   "meta_info": {},
-  "global_start_time": "2024-01-17T23:41:02.163946",
+  "global_start_time": "2024-01-23T19:24:19.749973",
   "observations": [
     {
       "config": {
@@ -18,7 +18,7 @@
       "constraints": null,
       "trial_state": 0,
       "elapsed_time": null,
-      "create_time": "2024-01-17T23:41:02.163907",
+      "create_time": "2024-01-23T19:24:19.749947",
       "extra_info": {}
     },
     {
@@ -33,7 +33,7 @@
       "constraints": null,
       "trial_state": 0,
       "elapsed_time": null,
-      "create_time": "2024-01-17T23:41:02.163926",
+      "create_time": "2024-01-23T19:24:19.749962",
       "extra_info": {}
     },
     {
@@ -48,7 +48,7 @@
       "constraints": null,
       "trial_state": 0,
       "elapsed_time": null,
-      "create_time": "2024-01-17T23:41:02.163932",
+      "create_time": "2024-01-23T19:24:19.749965",
       "extra_info": {}
     },
     {
@@ -63,7 +63,7 @@
       "constraints": null,
       "trial_state": 1,
       "elapsed_time": null,
-      "create_time": "2024-01-17T23:41:02.163938",
+      "create_time": "2024-01-23T19:24:19.749968",
       "extra_info": {}
     }
   ]

@@ -4,7 +4,7 @@
   "num_constraints": 0,
   "ref_point": null,
   "meta_info": {},
-  "global_start_time": "2024-01-17T23:38:09.314486",
+  "global_start_time": "2024-01-23T19:21:50.265127",
   "observations": [
     {
       "config": {
@@ -17,7 +17,7 @@
       "constraints": null,
       "trial_state": 0,
       "elapsed_time": 2.0,
-      "create_time": "2024-01-17T23:38:09.809814",
+      "create_time": "2024-01-23T19:21:50.696646",
       "extra_info": {}
     }
   ]
