@@ -37,7 +37,7 @@ def test_generic_advisor(configspace_tiny, history_single_obs):
     history = advisor.get_history()
     assert history == advisor.history
 
-    advisor.save_json("test_unitTest/datas/test.json")
+    advisor.save_json("test/datas/test.json")
 
-    advisor.load_json("test_unitTest/datas/test.json")
+    advisor.load_json("test/datas/test.json")
 

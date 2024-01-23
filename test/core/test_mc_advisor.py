@@ -41,6 +41,6 @@ def test_mc_advisor(configspace_tiny, multi_start_history_single_obs):
     history = advisor.get_history()
     assert history == advisor.history
 
-    advisor.save_json("test_unitTest/datas/test_mc.json")
+    advisor.save_json("test/datas/test_mc.json")
 
-    advisor.load_json("test_unitTest/datas/test_mc.json")
+    advisor.load_json("test/datas/test_mc.json")

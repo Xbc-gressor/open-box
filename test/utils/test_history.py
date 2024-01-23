@@ -448,13 +448,13 @@ class TestHistory:
             history_double_obs.visualize_hiplot()
 
     def test_save_json(self, history_double_obs):
-        history_double_obs.save_json('test_unitTest/datas/tmp.json')
+        history_double_obs.save_json('test/datas/tmp.json')
 
     def test_load_json(self, history_double_obs, configspace_tiny):
         with pytest.raises(FileNotFoundError):
-            history_double_obs.load_json('test_unitTest/datas/notfound.json', config_space=configspace_tiny)
+            history_double_obs.load_json('test/datas/notfound.json', config_space=configspace_tiny)
 
-        new_history = history_double_obs.load_json('test_unitTest/datas/tmp.json', config_space=configspace_tiny)
+        new_history = history_double_obs.load_json('test/datas/tmp.json', config_space=configspace_tiny)
 
         assert new_history is not None
 
