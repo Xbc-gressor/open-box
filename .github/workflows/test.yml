@@ -16,7 +16,7 @@ on:
 # todo: use the full test dir
 env:
   test-requires: "[test,extra]"
-  test-dir: test/examples
+  test-dir: test
   pytest-args: >-
     -rap
     --durations=20
@@ -33,8 +33,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: ["ubuntu-latest", "macos-latest", "windows-latest"]
-        python-version: ["3.7", "3.8", "3.9", "3.10"]
+        os: ["ubuntu-latest", "windows-latest"]
+        python-version: ["3.8", "3.9", "3.10"]
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
@@ -48,4 +48,9 @@ jobs:
         pip install ".${{ env.test-requires }}"
     - name: Run tests
       run: |
-        pytest ${{ env.pytest-args }} ${{ env.test-dir }}
+        pytest ${{ env.pytest-args }} ${{ env.test-dir }} --cov=openbox.acq_optimizer --cov=openbox.acquisition_function --cov=openbox.core --cov=openbox.optimizer --cov=openbox.surrogate --cov=openbox.utils --cov=openbox.visualization --cov-report=xml
+    - name: Upload coverage reports to Codecov with GitHub Action
+      if: ${{ runner.os == 'Linux' && matrix.python-version == 3.8 }}
+      uses: codecov/codecov-action@v3
+      env:
+        CODECOV_TOKEN: 04235bd3-471a-4c6d-b874-3e0f1773937d
