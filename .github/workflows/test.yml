@@ -53,4 +53,4 @@ jobs:
       if: ${{ runner.os == 'Linux' && matrix.python-version == 3.8 }}
       uses: codecov/codecov-action@v3
       env:
-        CODECOV_TOKEN: 5bc7653d-2e6b-4e4c-a08d-a0fd8adca6ad
+        CODECOV_TOKEN: 04235bd3-471a-4c6d-b874-3e0f1773937d
