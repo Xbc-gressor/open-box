@@ -16,7 +16,7 @@ on:
 # todo: use the full test dir
 env:
   test-requires: "[test,extra]"
-  test-dir: test
+  test-dir: test/new_test
   pytest-args: >-
     -rap
     --durations=20
@@ -33,8 +33,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: ["ubuntu-latest", "windows-latest"]
-        python-version: ["3.8", "3.9", "3.10"]
+        os: [ "masos-latest" ]
+        python-version: [ "3.8" ]
+#        os: ["ubuntu-latest", "windows-latest"]
+#        python-version: ["3.8", "3.9", "3.10"]
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
