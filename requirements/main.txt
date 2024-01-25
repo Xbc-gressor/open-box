@@ -1,5 +1,5 @@
-cython
-psutil
+cython <= 3.0.7
+psutil <= 5.9.7
 setuptools
 requests
 tqdm
@@ -15,3 +15,4 @@ ConfigSpace>=0.4.20,<=0.6
 emcee
 statsmodels
 platypus-opt==1.0.4
+
