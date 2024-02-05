@@ -16,8 +16,11 @@ def BraninCurrin(config: sp.Configuration):
     f2 = (1 - np.exp(-1 / (2 * x2))) * (2300 * x1 ** 3 + 1900 * x1 ** 2 + 2092 * x1 + 60) \
          / (100 * x1 ** 3 + 500 * x1 ** 2 + 4 * x1 + 20)
 
+    f3 = (1 + np.exp(-1 / (2 * x2))) * (2300 * x1 ** 3 + 1900 * x1 ** 2 + 2092 * x1 + 60) \
+         / (100 * x1 ** 3 + 500 * x1 ** 2 - 4 * x1 + 20)
+
     result = dict()
-    result['objectives'] = [f1, f2]
+    result['objectives'] = [f1, f2, f3]
     return result
 
 
@@ -29,13 +32,13 @@ if __name__ == "__main__":
     space.add_variables([x1, x2])
 
     # provide reference point if using EHVI method
-    ref_point = [18.0, 6.0]
+    ref_point = [18.0, 6.0, 6.0]
 
     # run
     opt = Optimizer(
         BraninCurrin,
         space,
-        num_objectives=2,
+        num_objectives=3,
         num_constraints=0,
         max_runs=50,
         surrogate_type='gp',
@@ -44,11 +47,11 @@ if __name__ == "__main__":
         initial_runs=9,
         init_strategy='sobol',
         ref_point=ref_point,
-        task_id='mo',
+        task_id='mo3',
         random_state=1,
         # Have a try on the new HTML visualization feature!
-        # visualization='advanced',  # or 'basic'. For 'advanced', run 'pip install "openbox[extra]"' first
-        # auto_open_html=True,  # open the visualization page in your browser automatically
+        visualization='advanced',  # or 'basic'. For 'advanced', run 'pip install "openbox[extra]"' first
+        auto_open_html=True,  # open the visualization page in your browser automatically
     )
     history = opt.run()
     print(history)

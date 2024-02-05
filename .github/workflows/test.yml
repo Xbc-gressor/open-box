@@ -54,5 +54,3 @@ jobs:
     - name: Upload coverage reports to Codecov with GitHub Action
       if: ${{ runner.os == 'Linux' && matrix.python-version == 3.8 }}
       uses: codecov/codecov-action@v3
-      env:
-        CODECOV_TOKEN: 04235bd3-471a-4c6d-b874-3e0f1773937d
